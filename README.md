@@ -8,7 +8,7 @@ Visit: [https://sagargupta16.github.io](https://sagargupta16.github.io)
 
 ## 📄 About
 
-This repository serves as Sagar Gupta's portfolio website. The custom domain `sagargupta.live` is configured to point to this GitHub Pages site.
+This repository serves as a redirect page to Sagar Gupta's main portfolio hosted at [sagargupta16.github.io/portfolio-react](https://sagargupta16.github.io/portfolio-react/). The custom domain `sagargupta.live` is configured to point to this GitHub Pages site.
 
 **Note**: If `sagargupta.live` is showing a parking page, you need to configure your DNS settings in GoDaddy (see instructions below).
 

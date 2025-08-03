@@ -20,10 +20,10 @@
   <meta property="twitter:description" content="Software Developer & Engineer Portfolio">
   
   <title>Sagar Gupta - Portfolio</title>
-  <link rel="canonical" href="https://sagargupta.live/">
+  <link rel="canonical" href="https://sagargupta16.github.io/portfolio-react/">
   
-  <!-- Remove auto-redirect for now -->
-  <!-- <meta http-equiv="refresh" content="3; url=https://sagargupta16.github.io/"> -->
+  <!-- Redirect after 3 seconds to allow users to see the message -->
+  <meta http-equiv="refresh" content="3; url=https://sagargupta16.github.io/portfolio-react/">
   
   <style>
     body {
@@ -110,15 +110,14 @@
   </style>
   
   <script type="text/javascript">
-    // Temporarily disable auto-redirect
-    // setTimeout(function() {
-    //   window.location.href = "https://sagargupta16.github.io/";
-    // }, 3000);
+    // Redirect to portfolio after 3 seconds
+    setTimeout(function() {
+      window.location.href = "https://sagargupta16.github.io/portfolio-react/";
+    }, 3000);
     
-    // Function for manual redirect
+    // Function for immediate redirect
     function redirectToPortfolio() {
-      // Update this URL to where your actual portfolio is hosted
-      window.location.href = "https://sagargupta16.github.io/";
+      window.location.href = "https://sagargupta16.github.io/portfolio-react/";
     }
   </script>
   
@@ -128,35 +127,22 @@
 </head>
 <body>
   <div class="container">
-    <h1>Welcome to Sagar Gupta's Portfolio!</h1>
-    <p>This is the portfolio website for <strong>Sagar Gupta</strong> - Software Developer & Engineer</p>
-    <p>Your domain <strong>sagargupta.live</strong> is currently pointing to a parking page. To fix this, you need to configure your DNS settings in GoDaddy.</p>
+    <h1>Welcome!</h1>
+    <p>You're being redirected to my portfolio at <strong>sagargupta16.github.io/portfolio-react</strong></p>
+    <p>If you're not redirected automatically, click the button below:</p>
     
-    <div style="margin: 30px 0; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px; text-align: left;">
-      <h3>🔧 To Fix Your Domain:</h3>
-      <ol style="line-height: 1.8;">
-        <li>Log into your GoDaddy account</li>
-        <li>Go to DNS Management for sagargupta.live</li>
-        <li>Add these A records:
-          <ul>
-            <li>185.199.108.153</li>
-            <li>185.199.109.153</li>
-            <li>185.199.110.153</li>
-            <li>185.199.111.153</li>
-          </ul>
-        </li>
-        <li>Add CNAME: www → sagargupta16.github.io</li>
-        <li>Remove any existing parking records</li>
-      </ol>
-    </div>
-    
-    <a href="https://sagargupta16.github.io/" class="btn">
-      Visit GitHub Pages Version
+    <a href="https://sagargupta16.github.io/portfolio-react/" class="btn" onclick="redirectToPortfolio()">
+      Visit Portfolio
     </a>
     
-    <div class="loading" style="display: none;">
+    <div class="loading">
       <div class="spinner"></div>
-      Redirecting...
+      Redirecting in a few seconds...
+    </div>
+    
+    <div style="margin-top: 30px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px; text-align: left; font-size: 0.9em; opacity: 0.8;">
+      <h4>🔧 Domain Setup Note:</h4>
+      <p>Once you configure your DNS in GoDaddy to point <strong>sagargupta.live</strong> to GitHub Pages, this redirect will work with your custom domain too!</p>
     </div>
   </div>
   
@@ -164,7 +150,7 @@
   <noscript>
     <div style="text-align: center; padding: 20px; background: #f8f9fa; color: #333; border-radius: 10px; margin: 20px;">
       <h2>JavaScript is disabled</h2>
-      <p>Please <a href="https://sagargupta16.github.io/" style="color: #007bff;">click here</a> to visit the GitHub Pages version.</p>
+      <p>Please <a href="https://sagargupta16.github.io/portfolio-react/" style="color: #007bff;">click here</a> to visit my portfolio.</p>
     </div>
   </noscript>
 </body>
