@@ -1,17 +1,150 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Redirecting...</title>
-  <meta http-equiv="refresh" content="0; url=https://sagargupta.live/portfolio-react/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sagar Gupta's Portfolio - Software Developer & Engineer">
+  <meta name="keywords" content="Sagar Gupta, Portfolio, Software Developer, Engineer">
+  <meta name="author" content="Sagar Gupta">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sagargupta16.github.io/">
+  <meta property="og:title" content="Sagar Gupta - Portfolio">
+  <meta property="og:description" content="Software Developer & Engineer Portfolio">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://sagargupta16.github.io/">
+  <meta property="twitter:title" content="Sagar Gupta - Portfolio">
+  <meta property="twitter:description" content="Software Developer & Engineer Portfolio">
+  
+  <title>Sagar Gupta - Portfolio</title>
+  <link rel="canonical" href="https://sagargupta.live/portfolio-react/">
+  
+  <!-- Redirect after 3 seconds to allow users to see the message -->
+  <meta http-equiv="refresh" content="3; url=https://sagargupta.live/portfolio-react/">
+  
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    
+    .container {
+      max-width: 600px;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+    
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      font-weight: 300;
+    }
+    
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+    
+    .btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .loading {
+      margin-top: 30px;
+      font-size: 0.9em;
+      opacity: 0.7;
+    }
+    
+    .spinner {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: white;
+      animation: spin 1s ease-in-out infinite;
+      margin-right: 10px;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    @media (max-width: 600px) {
+      h1 { font-size: 2em; }
+      p { font-size: 1.1em; }
+      .container { padding: 30px 20px; }
+    }
+  </style>
+  
   <script type="text/javascript">
-      window.location.href = "https://sagargupta.live/portfolio-react/"
+    // Redirect after a delay to ensure better user experience
+    setTimeout(function() {
+      window.location.href = "https://sagargupta.live/portfolio-react/";
+    }, 3000);
+    
+    // Immediate redirect for users who click the button
+    function redirectNow() {
+      window.location.href = "https://sagargupta.live/portfolio-react/";
+    }
   </script>
-  <!-- 100% privacy-first analytics -->
-<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+  
+  <!-- Privacy-first analytics -->
+  <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 </head>
 <body>
-  <h1>Redirecting to https://sagargupta.live/portfolio-react/ ...</h1>
+  <div class="container">
+    <h1>Welcome!</h1>
+    <p>You're being redirected to my portfolio at <strong>sagargupta.live</strong></p>
+    <p>If you're not redirected automatically, click the button below:</p>
+    <a href="https://sagargupta.live/portfolio-react/" class="btn" onclick="redirectNow()">
+      Visit Portfolio
+    </a>
+    <div class="loading">
+      <div class="spinner"></div>
+      Redirecting in a few seconds...
+    </div>
+  </div>
+  
+  <!-- Fallback for users with JavaScript disabled -->
+  <noscript>
+    <div style="text-align: center; padding: 20px; background: #f8f9fa; color: #333; border-radius: 10px; margin: 20px;">
+      <h2>JavaScript is disabled</h2>
+      <p>Please <a href="https://sagargupta.live/portfolio-react/" style="color: #007bff;">click here</a> to visit my portfolio.</p>
+    </div>
+  </noscript>
 </body>
 </html>

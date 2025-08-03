@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://sagargupta16.github.io/sitemap.xml
+
+# Main portfolio site
+Crawl-delay: 1
