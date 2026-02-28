@@ -1,47 +1,70 @@
 # sagargupta16.github.io
 
-This is the GitHub Pages repository for Sagar Gupta's personal website.
+GitHub Pages personal website with custom domain configuration, security headers, and automatic redirect to the main portfolio.
 
-## 🌐 Live Site
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=flat&logo=githubpages&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 
-Visit: [https://sagargupta16.github.io](https://sagargupta16.github.io)
+## Live Site
 
-## 📄 About
+- **Primary**: [sagargupta.online](https://sagargupta.online)
+- **GitHub Pages**: [sagargupta16.github.io](https://sagargupta16.github.io)
+- **Portfolio**: [sagargupta16.github.io/portfolio-react](https://sagargupta16.github.io/portfolio-react/)
 
-This repository serves as a redirect page to Sagar Gupta's main portfolio hosted at [sagargupta16.github.io/portfolio-react](https://sagargupta16.github.io/portfolio-react/). The custom domain `sagargupta.live` is configured to point to this GitHub Pages site.
+## Overview
 
-**Note**: If `sagargupta.live` is showing a parking page, you need to configure your DNS settings in GoDaddy (see instructions below).
+This repository serves as the GitHub Pages root for Sagar Gupta's personal domain. It handles custom domain configuration, security headers (Content Security Policy), SEO optimization, and automatic redirection to the main portfolio site.
 
-## 🔧 Technical Details
+## Features
 
-- **Domain**: Custom domain configured via CNAME
-- **Hosting**: GitHub Pages
-- **Analytics**: Privacy-first analytics with SimpleAnalytics
+- **Custom Domain** -- `sagargupta.online` via GoDaddy DNS configuration
+- **Content Security Policy** -- CSP headers for security hardening
+- **Custom 404 Page** -- Branded error page with navigation
+- **Privacy-First Analytics** -- SimpleAnalytics integration (no cookies)
+- **SEO Optimized** -- robots.txt and sitemap.xml configured
+- **Auto Deploy** -- Pushes to `main` automatically deploy via GitHub Pages
 
-### DNS Configuration for sagargupta.live
+## Repository Structure
 
-To point your GoDaddy domain to GitHub Pages:
-
-1. **Log into GoDaddy DNS Management**
-2. **Add these A records for `@` (root domain):**
-   - `185.199.108.153`
-   - `185.199.109.153`
-   - `185.199.110.153`
-   - `185.199.111.153`
-3. **Add CNAME record:**
-   - Name: `www`
-   - Value: `sagargupta16.github.io`
-4. **Remove any existing parking/forwarding records**
-5. **Wait 24-48 hours for DNS propagation**
-
-## 📁 Repository Structure
-
-```text
-├── index.html    # Main redirect page
-├── CNAME        # Custom domain configuration
-└── README.md    # This file
+```
+sagargupta16.github.io/
+├── index.html          # Main page with redirect to portfolio
+├── 404.html            # Custom 404 error page
+├── style.css           # Page styling
+├── redirect.js         # Redirect logic
+├── favicon.svg         # Site favicon
+├── CNAME               # Custom domain (sagargupta.online)
+├── robots.txt          # SEO robots configuration
+├── sitemap.xml         # XML sitemap for search engines
+└── .well-known/        # Security verification files
 ```
 
-## 🚀 Deployment
+## DNS Configuration (GoDaddy)
 
-This site is automatically deployed via GitHub Pages when changes are pushed to the main branch.
+To point a custom domain to GitHub Pages:
+
+### A Records (Root Domain `@`)
+
+| Type | Name | Value |
+|------|------|-------|
+| A | @ | 185.199.108.153 |
+| A | @ | 185.199.109.153 |
+| A | @ | 185.199.110.153 |
+| A | @ | 185.199.111.153 |
+
+### CNAME Record (www subdomain)
+
+| Type | Name | Value |
+|------|------|-------|
+| CNAME | www | sagargupta16.github.io |
+
+**Note**: DNS propagation takes 24-48 hours. Remove any existing parking/forwarding records.
+
+## Deployment
+
+This site deploys automatically via GitHub Pages when changes are pushed to the `main` branch. No build step required -- static files are served directly.
+
+## License
+
+MIT
