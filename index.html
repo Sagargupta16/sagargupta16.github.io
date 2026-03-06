@@ -12,39 +12,32 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sagargupta16.github.io/">
+  <meta property="og:url" content="https://sagargupta.online/">
   <meta property="og:title" content="Sagar Gupta - Portfolio">
   <meta property="og:description" content="Software Developer & Engineer Portfolio">
-  <meta property="og:image" content="https://sagargupta16.github.io/og-image.png">
+  <meta property="og:image" content="https://sagargupta.online/og-image.svg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://sagargupta16.github.io/">
+  <meta property="twitter:url" content="https://sagargupta.online/">
   <meta property="twitter:title" content="Sagar Gupta - Portfolio">
   <meta property="twitter:description" content="Software Developer & Engineer Portfolio">
-  <meta property="twitter:image" content="https://sagargupta16.github.io/og-image.png">
+  <meta property="twitter:image" content="https://sagargupta.online/og-image.svg">
 
   <title>Sagar Gupta - Portfolio</title>
   <link rel="canonical" href="https://sagargupta.online/portfolio-react/">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="stylesheet" href="/style.css">
-
-  <!-- Redirect handled by JavaScript below -->
 </head>
 <body>
+  <!-- Instant redirect to portfolio -->
+  <script>globalThis.location.replace("https://sagargupta.online/portfolio-react/");</script>
+
+  <!-- Fallback UI shown only if redirect fails or JS is slow -->
   <main class="container">
-    <h1>Welcome!</h1>
-    <p>You're being redirected to my portfolio at <strong>sagargupta.online/portfolio-react</strong></p>
-    <p>If you're not redirected automatically, click the button below:</p>
-
-    <a href="https://sagargupta.online/portfolio-react/" class="btn" onclick="redirectToPortfolio()">
-      Visit Portfolio
-    </a>
-
-    <div class="loading" aria-live="polite">
-      <output class="spinner" aria-label="Loading"></output>
-      Redirecting in a few seconds...
-    </div>
+    <h1>Redirecting...</h1>
+    <p>Taking you to <strong>sagargupta.online/portfolio-react</strong></p>
+    <a href="https://sagargupta.online/portfolio-react/" class="btn">Visit Portfolio</a>
   </main>
 
   <!-- Fallback for users with JavaScript disabled -->
@@ -54,8 +47,6 @@
       <p>Please <a href="https://sagargupta.online/portfolio-react/" style="color: #007bff;">click here</a> to visit my portfolio.</p>
     </div>
   </noscript>
-
-  <script>globalThis.location.replace("https://sagargupta.online/portfolio-react/");</script>
 
   <!-- Privacy-first analytics -->
   <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>

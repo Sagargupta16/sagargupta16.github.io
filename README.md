@@ -9,8 +9,8 @@ GitHub Pages personal website with custom domain configuration, security headers
 ## Live Site
 
 - **Primary**: [sagargupta.online](https://sagargupta.online)
-- **GitHub Pages**: [sagargupta16.github.io](https://sagargupta16.github.io)
-- **Portfolio**: [sagargupta16.github.io/portfolio-react](https://sagargupta16.github.io/portfolio-react/)
+- **GitHub Pages**: [sagargupta16.github.io](https://sagargupta16.github.io) (redirects to primary)
+- **Portfolio**: [sagargupta.online/portfolio-react](https://sagargupta.online/portfolio-react/)
 
 ## Overview
 

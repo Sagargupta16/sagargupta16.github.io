@@ -1,6 +1,6 @@
-// Shared redirect configuration
-var PORTFOLIO_URL = "https://sagargupta16.github.io/portfolio-react/";
-var HOME_URL = "https://sagargupta16.github.io/";
+// Shared redirect configuration — single source of truth for all URLs
+var PORTFOLIO_URL = "https://sagargupta.online/portfolio-react/";
+var HOME_URL = "https://sagargupta.online/";
 
 function redirectToPortfolio() {
   window.location.href = PORTFOLIO_URL;

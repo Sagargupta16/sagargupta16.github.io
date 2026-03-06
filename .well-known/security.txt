@@ -1,4 +1,4 @@
-Contact: https://sagargupta16.github.io/portfolio-react/
-Expires: 2026-08-03T00:00:00.000Z
+Contact: https://sagargupta.online/portfolio-react/
+Expires: 2027-03-06T00:00:00.000Z
 Preferred-Languages: en
-Canonical: https://sagargupta16.github.io/.well-known/security.txt
+Canonical: https://sagargupta.online/.well-known/security.txt

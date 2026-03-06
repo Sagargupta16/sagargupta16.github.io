@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://sagargupta16.github.io/sitemap.xml
+Sitemap: https://sagargupta.online/sitemap.xml
 
 # Main portfolio site
 Crawl-delay: 1
