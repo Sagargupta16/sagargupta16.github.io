@@ -1,11 +1,17 @@
-/* Shared styles for sagargupta.online */
+/* ============================================
+   sagargupta.online — Glassmorphism Design
+   ============================================ */
 
+/* --- Reset --- */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* --- Animated Gradient Background --- */
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   display: flex;
@@ -14,93 +20,292 @@ body {
   justify-content: center;
   min-height: 100vh;
   margin: 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(-45deg, #667eea, #764ba2, #4a00e0, #6c5ce7, #667eea);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
   color: white;
   text-align: center;
   padding: 20px;
+  overflow: hidden;
+  position: relative;
 }
 
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 100% 50%; }
+  50% { background-position: 100% 0%; }
+  75% { background-position: 0% 100%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* --- Floating Orbs --- */
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::before {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, transparent 70%);
+  top: -80px;
+  right: -80px;
+  animation: floatOrb1 20s ease-in-out infinite;
+}
+
+body::after {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+  bottom: -120px;
+  left: -120px;
+  animation: floatOrb2 25s ease-in-out infinite;
+}
+
+@keyframes floatOrb1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-60px, 80px) scale(1.1); }
+  66% { transform: translate(40px, -40px) scale(0.9); }
+}
+
+@keyframes floatOrb2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(80px, -60px) scale(1.15); }
+  66% { transform: translate(-50px, 50px) scale(0.85); }
+}
+
+/* --- Glassmorphism Card --- */
 .container {
-  max-width: 600px;
-  padding: 40px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+  max-width: 560px;
+  width: 100%;
+  padding: 48px 40px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  animation: cardEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
+.container::before {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  top: -40px;
+  right: -40px;
+  pointer-events: none;
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* --- Typography --- */
 h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  font-weight: 300;
+  font-size: 2.4em;
+  font-weight: 600;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+  animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
 }
 
 p {
-  font-size: 1.2em;
-  line-height: 1.6;
-  margin-bottom: 30px;
-  opacity: 0.9;
+  font-size: 1.1em;
+  line-height: 1.7;
+  margin-bottom: 28px;
+  opacity: 0.85;
+  animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
 }
 
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Buttons --- */
 .btn {
   display: inline-block;
-  padding: 12px 30px;
-  background: rgba(255, 255, 255, 0.2);
+  padding: 14px 32px;
+  background: rgba(255, 255, 255, 0.12);
   color: white;
   text-decoration: none;
-  border-radius: 25px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  transition: all 0.3s ease;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   font-weight: 500;
-  margin: 0 10px 10px 0;
+  font-size: 0.95em;
+  letter-spacing: 0.01em;
+  margin: 0 8px 12px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
 }
 
 .btn:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px);
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.2),
+    0 0 30px rgba(255, 255, 255, 0.08);
+}
+
+.btn:active {
+  transform: translateY(-1px);
 }
 
 .btn:focus-visible {
-  outline: 2px solid white;
-  outline-offset: 2px;
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 3px;
 }
 
+/* --- Loading Spinner --- */
 .loading {
-  margin-top: 30px;
-  font-size: 0.9em;
-  opacity: 0.7;
+  margin-top: 28px;
+  font-size: 0.85em;
+  opacity: 0.6;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
+  animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
 }
 
 .spinner {
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
-  border-top-color: white;
-  animation: spin 1s ease-in-out infinite;
-  margin-right: 10px;
-}
-
-.error-code {
-  font-size: 6em;
-  font-weight: bold;
-  margin-bottom: 20px;
-  opacity: 0.8;
-  line-height: 1;
+  border-top-color: rgba(255, 255, 255, 0.8);
+  animation: spin 0.8s linear infinite;
 }
 
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
 
+/* --- 404 Error Code with Glitch --- */
+.error-code {
+  font-size: 8em;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  animation: glitchIn 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes glitchIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+    filter: blur(10px);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.05) skewX(-2deg);
+    filter: blur(0);
+  }
+  50% {
+    transform: scale(0.98) skewX(1deg);
+  }
+  100% {
+    transform: scale(1) skewX(0);
+  }
+}
+
+.error-code::before,
+.error-code::after {
+  content: '404';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.error-code::before {
+  animation: glitchTop 4s ease-in-out infinite;
+  clip-path: inset(0 0 65% 0);
+}
+
+.error-code::after {
+  animation: glitchBottom 4s ease-in-out infinite 0.1s;
+  clip-path: inset(65% 0 0 0);
+}
+
+@keyframes glitchTop {
+  0%, 92%, 100% { transform: translate(0); }
+  93% { transform: translate(-3px, -1px); }
+  95% { transform: translate(3px, 1px); }
+  97% { transform: translate(-2px, 0); }
+}
+
+@keyframes glitchBottom {
+  0%, 92%, 100% { transform: translate(0); }
+  94% { transform: translate(3px, 1px); }
+  96% { transform: translate(-3px, -1px); }
+  98% { transform: translate(2px, 0); }
+}
+
+/* --- Divider --- */
+.divider {
+  width: 60px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  margin: 0 auto 28px;
+  animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+/* --- Responsive --- */
 @media (max-width: 600px) {
-  .error-code { font-size: 4em; }
-  h1 { font-size: 2em; }
-  p { font-size: 1.1em; }
-  .container { padding: 30px 20px; }
+  body { padding: 16px; }
+  .container { padding: 36px 24px; border-radius: 20px; }
+  .error-code { font-size: 5em; }
+  h1 { font-size: 1.8em; }
+  p { font-size: 1em; }
+  .btn { padding: 12px 26px; margin: 0 4px 10px; }
+}
+
+/* --- Reduced Motion --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

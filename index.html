@@ -36,15 +36,20 @@
   <!-- Fallback UI shown only if redirect fails or JS is slow -->
   <main class="container">
     <h1>Redirecting...</h1>
+    <div class="divider"></div>
     <p>Taking you to <strong>sagargupta.online/portfolio-react</strong></p>
     <a href="https://sagargupta.online/portfolio-react/" class="btn">Visit Portfolio</a>
+    <div class="loading" aria-live="polite">
+      <output class="spinner" aria-label="Loading"></output>
+      Redirecting...
+    </div>
   </main>
 
   <!-- Fallback for users with JavaScript disabled -->
   <noscript>
-    <div style="text-align: center; padding: 20px; background: #f8f9fa; color: #333; border-radius: 10px; margin: 20px;">
+    <div style="text-align: center; padding: 20px; background: rgba(0,0,0,0.4); color: #f0f0f0; border-radius: 16px; margin: 20px; border: 1px solid rgba(255,255,255,0.15);">
       <h2>JavaScript is disabled</h2>
-      <p>Please <a href="https://sagargupta.online/portfolio-react/" style="color: #007bff;">click here</a> to visit my portfolio.</p>
+      <p>Please <a href="https://sagargupta.online/portfolio-react/" style="color: #c4b5fd;">click here</a> to visit my portfolio.</p>
     </div>
   </noscript>
 

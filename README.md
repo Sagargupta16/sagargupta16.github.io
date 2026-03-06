@@ -29,15 +29,24 @@ This repository serves as the GitHub Pages root for Sagar Gupta's personal domai
 
 ```
 sagargupta16.github.io/
-├── index.html          # Main page with redirect to portfolio
-├── 404.html            # Custom 404 error page
-├── style.css           # Page styling
-├── redirect.js         # Redirect logic
-├── favicon.svg         # Site favicon
-├── CNAME               # Custom domain (sagargupta.online)
-├── robots.txt          # SEO robots configuration
-├── sitemap.xml         # XML sitemap for search engines
-└── .well-known/        # Security verification files
+├── index.html              # Landing page with instant redirect to portfolio
+├── 404.html                # Custom 404 error page
+├── style.css               # Shared glassmorphism styling
+├── redirect.js             # Redirect configuration & utilities
+├── favicon.svg             # Site favicon (SVG)
+├── og-image.svg            # Social media preview image
+├── CNAME                   # Custom domain (sagargupta.online)
+├── robots.txt              # SEO robots configuration
+├── sitemap.xml             # XML sitemap for search engines
+├── .well-known/            # Security verification files
+│   └── security.txt        # RFC 9116 security contact
+├── .github/                # GitHub configuration
+│   ├── CODEOWNERS          # Code ownership
+│   ├── FUNDING.yml         # GitHub Sponsors
+│   └── pull_request_template.md
+├── SECURITY.md             # Security policy
+├── renovate.json           # Automated dependency updates
+└── .gitignore              # Git ignore rules
 ```
 
 ## DNS Configuration (GoDaddy)
