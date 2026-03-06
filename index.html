@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-redirect="instant">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,11 +28,11 @@
   <link rel="canonical" href="https://sagargupta.online/portfolio-react/">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="stylesheet" href="/style.css">
+
+  <!-- Instant redirect via external script (CSP-compliant) -->
+  <script src="/redirect.js"></script>
 </head>
 <body>
-  <!-- Instant redirect to portfolio -->
-  <script>globalThis.location.replace("https://sagargupta.online/portfolio-react/");</script>
-
   <!-- Fallback UI shown only if redirect fails or JS is slow -->
   <main class="container">
     <h1>Redirecting...</h1>

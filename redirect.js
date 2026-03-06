@@ -1,13 +1,24 @@
 // Shared redirect configuration — single source of truth for all URLs
-var PORTFOLIO_URL = "https://sagargupta.online/portfolio-react/";
-var HOME_URL = "https://sagargupta.online/";
+const PORTFOLIO_URL = "https://sagargupta.online/portfolio-react/";
+const HOME_URL = "https://sagargupta.online/";
 
 function redirectToPortfolio() {
-  window.location.href = PORTFOLIO_URL;
+  window.location.replace(PORTFOLIO_URL);
 }
 
-function scheduleRedirect(seconds) {
-  setTimeout(function () {
-    window.location.href = PORTFOLIO_URL;
-  }, seconds * 1000);
-}
+// Read data-redirect from <html> element to determine behavior:
+//   "instant" → redirect immediately (index.html)
+//   "5"       → redirect after 5 seconds (404.html)
+(function () {
+  const mode = document.documentElement.dataset.redirect;
+  if (!mode) return;
+
+  if (mode === "instant") {
+    redirectToPortfolio();
+  } else {
+    const seconds = Number.parseInt(mode, 10);
+    if (seconds > 0) {
+      setTimeout(redirectToPortfolio, seconds * 1000);
+    }
+  }
+})();
