@@ -29,29 +29,26 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="stylesheet" href="/style.css">
 
-  <!-- Instant redirect via external script (CSP-compliant) -->
+  <!-- JS redirect (fastest layer, CSP-compliant external script) -->
   <script src="/redirect.js"></script>
 </head>
 <body>
-  <!-- Fallback UI shown only if redirect fails or JS is slow -->
+  <!-- Fallback UI — only visible if both JS and meta-refresh fail -->
   <main class="container">
-    <h1>Redirecting...</h1>
+    <div class="icon-wrap" aria-hidden="true">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </div>
+    <h1>Redirecting</h1>
     <div class="divider"></div>
-    <p>Taking you to <strong>sagargupta.online/portfolio-react</strong></p>
-    <a href="https://sagargupta.online/portfolio-react/" class="btn">Visit Portfolio</a>
+    <p>Taking you to my portfolio at <strong>sagargupta.online/portfolio-react</strong></p>
+    <a href="https://sagargupta.online/portfolio-react/" class="btn btn-primary">Go to Portfolio</a>
     <div class="loading" aria-live="polite">
-      <output class="spinner" aria-label="Loading"></output>
-      Redirecting...
+      <span class="pulse-dot"></span>
+      Redirecting now...
     </div>
   </main>
-
-  <!-- Fallback for users with JavaScript disabled -->
-  <noscript>
-    <div style="text-align: center; padding: 20px; background: rgba(0,0,0,0.4); color: #f0f0f0; border-radius: 16px; margin: 20px; border: 1px solid rgba(255,255,255,0.15);">
-      <h2>JavaScript is disabled</h2>
-      <p>Please <a href="https://sagargupta.online/portfolio-react/" style="color: #c4b5fd;">click here</a> to visit my portfolio.</p>
-    </div>
-  </noscript>
 
   <!-- Privacy-first analytics -->
   <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>

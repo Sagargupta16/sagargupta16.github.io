@@ -13,16 +13,17 @@
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <main class="container">
+  <main class="container container-404">
     <div class="error-code" aria-hidden="true">404</div>
     <h1>Page Not Found</h1>
     <div class="divider"></div>
-    <p>The page you're looking for doesn't exist or has been moved. You'll be redirected to my portfolio shortly.</p>
-    <a href="https://sagargupta.online/portfolio-react/" class="btn">Visit Portfolio</a>
-    <a href="https://sagargupta.online/" class="btn">Go Home</a>
-
+    <p>This page doesn't exist or has been moved. You'll be redirected to my portfolio shortly.</p>
+    <nav class="btn-group">
+      <a href="https://sagargupta.online/portfolio-react/" class="btn btn-primary">Visit Portfolio</a>
+      <a href="https://sagargupta.online/" class="btn btn-secondary">Go Home</a>
+    </nav>
     <div class="loading" aria-live="polite">
-      <output class="spinner" aria-label="Loading"></output>
+      <span class="pulse-dot"></span>
       Redirecting in a few seconds...
     </div>
   </main>
