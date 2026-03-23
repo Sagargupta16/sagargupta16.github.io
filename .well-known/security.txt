@@ -1,4 +1,0 @@
-Contact: https://sagargupta.online/portfolio-react/
-Expires: 2027-03-06T00:00:00.000Z
-Preferred-Languages: en
-Canonical: https://sagargupta.online/.well-known/security.txt
