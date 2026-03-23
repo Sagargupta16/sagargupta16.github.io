@@ -30,13 +30,14 @@ index.html          Landing page with instant redirect
 404.html            Branded 404 with delayed redirect
 redirect.js         Shared redirect config (single source of truth)
 style.css           Dark glassmorphism styling
-og-image.png        Social media preview (1200x630)
-favicon.svg         Browser favicon (SVG)
-favicon.ico         Browser favicon (ICO fallback)
-apple-touch-icon.png  iOS bookmark icon (180x180)
 sitemap.xml         XML sitemap (10 URLs)
 robots.txt          Crawler configuration
 CNAME               Custom domain: sagargupta.online
+assets/
+  og-image.png      Social media preview (1200x630)
+  favicon.svg       Browser favicon (SVG)
+  favicon.ico       Browser favicon (ICO fallback)
+  apple-touch-icon.png  iOS bookmark icon (180x180)
 ```
 
 ## DNS Setup (GoDaddy)
