@@ -11,3 +11,8 @@ Desktop.ini
 
 # Logs
 *.log
+
+# Added for consistency
+.env
+.env.local
+.env.*.local
