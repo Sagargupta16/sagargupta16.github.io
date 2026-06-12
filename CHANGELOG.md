@@ -12,7 +12,7 @@
 ## [2.0.0] - 2026-03-06
 
 - Dark-themed glassmorphism redesign
-- CSP headers, SimpleAnalytics, redirect.js
+- CSP meta tag, SimpleAnalytics, redirect.js
 
 ## [1.0.0] - 2023-07-14
 

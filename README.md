@@ -21,7 +21,7 @@ The custom 404 page redirects to the portfolio after 5 seconds.
 - JSON-LD structured data (Person schema with employer, university, social links)
 - XML sitemap covering all 10 GitHub Pages sites
 - robots.txt with sitemap reference
-- Content Security Policy headers
+- Content Security Policy via meta tag
 
 ## Files
 
