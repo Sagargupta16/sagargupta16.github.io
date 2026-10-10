@@ -1,7 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /assets/
-Disallow: /portfolio-react/assets/
 
 # Sitemap
 Sitemap: https://sagargupta.online/sitemap.xml
