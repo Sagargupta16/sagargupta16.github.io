@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.2.0] - 2026-10-14
+
+- Current AWS title is now "ProServe (Cloud Consultant) - DevOps/MLOps" in the page title, description, Open Graph and Twitter titles, JSON-LD jobTitle and the 404 page, matching the portfolio, profile README and resume
+
 ## [2.1.1] - 2026-10-10
 
 - Stop blocking /assets/ and /portfolio-react/assets/ in robots.txt so crawlers can load the JS and CSS that render the portfolio
