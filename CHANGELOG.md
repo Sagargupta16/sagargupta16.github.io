@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.2.2] - 2026-10-24
+
+- CSP `style-src` no longer allows `'unsafe-inline'` on the landing and 404 pages; both pages take all their styles from style.css, so nothing inline needed it
+
 ## [2.2.1] - 2026-10-18
 
 - JSON-LD address is now Bengaluru, matching the portfolio and resume since the 2026-10-14 move
